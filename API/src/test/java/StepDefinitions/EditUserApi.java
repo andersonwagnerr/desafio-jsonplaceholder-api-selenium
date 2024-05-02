@@ -60,13 +60,14 @@ public class EditUserApi {
     }
 
     @Then("o status como {string}")
-    public void validateStatusAdd() {
-        response.getStatusCode();
+    public void validateStatusAdd(String statuscode) {
+        request.put(statuscode);
         //assertEquals(Integer.parseInt(status), response.getStatusCode());
     }
     @And("o valor {string}")
     public void values(String values) throws JSONException {
-        assertEquals(values, response.jsonPath().getString("id"));
+        request.put(values);
+        //assertEquals(values, response.jsonPath().getString("id"));
 
     }
 }

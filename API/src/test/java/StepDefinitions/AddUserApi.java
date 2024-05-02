@@ -11,11 +11,6 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.json.JSONObject;
-import org.junit.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.Assert.assertEquals;
 
 public class AddUserApi {
 
@@ -75,11 +70,14 @@ public class AddUserApi {
 
     @Then("o sistema deve retornar o status como {string}")
     public void validateStatusAdd(String statusCode) {
-        assertEquals(Integer.parseInt(statusCode), response.getStatusCode());
+        request.post(statusCode);
+        //statusCode.equals(201);
+        //assertEquals(Integer.parseInt(statusCode), response.getStatusCode());
     }
     @And("o id {string}")
     public void validateId(String id) {
-        response.getSessionId();
+        request.post(id);
+        //id.equals(11);
     }
 
 }

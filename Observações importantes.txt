@@ -4,7 +4,7 @@
 - Os testes de Selenium estão na aba de Selenium
     - Os mesmos foram feitos na mesma estrutura dos testes de selenium
 
-- Os testes de API também foram feitos no postam
+- Os testes de API também foram feitos no postman
 
 
 ##########################

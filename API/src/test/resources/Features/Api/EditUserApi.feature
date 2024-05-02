@@ -1,6 +1,6 @@
 Feature: Realizar um requisição do tipo PUT via api no site jsonplaceholder
 
-  Scenario Outline: Alterar dados do usuarios
+  Scenario Outline: Alterar dados do usuario
     Given usuario deseje alterar um dado do usuario via put na api jsonplaceholder
     When inserir no endpoint "<endpoint>" o ID "<id>"
     And o e-mail como "<email>"
